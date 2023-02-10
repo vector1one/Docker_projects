@@ -1,0 +1,1 @@
+docker run -d --network capes --restart unless-stopped --name capes-draw.io fjudith/draw.io:latest
