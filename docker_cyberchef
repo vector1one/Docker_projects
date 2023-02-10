@@ -1,1 +1,2 @@
 
+docker run -d --network capes --restart unless-stopped --name capes-cyberchef mpepping/cyberchef:latest
