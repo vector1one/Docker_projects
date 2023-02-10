@@ -1,0 +1,24 @@
+git clone https://github.com/wekan/wekan
+
+Then edit docker-compose.yml with these lines uncommented this way:
+
+   #-------------------------------------------------------------------------------------
+    # ==== BUILD wekan-app DOCKER CONTAINER FROM SOURCE, if you uncomment these ====
+    # ==== and use commands: docker-compose up -d --build
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_VERSION=${NODE_VERSION}
+        - METEOR_RELEASE=${METEOR_RELEASE}
+        - NPM_VERSION=${NPM_VERSION}
+        - ARCHITECTURE=${ARCHITECTURE}
+        - SRC_PATH=${SRC_PATH}
+        - METEOR_EDGE=${METEOR_EDGE}
+        - USE_EDGE=${USE_EDGE}
+    #-------------------------------------------------------------------------------------
+
+
+docker-compose up -d --build
+docker run -d --restart=always --name wekan-db mongo:5
+docker run -d --restart=always --name wekan --link "wekan-db:db" -e "WITH_API=true" -e "MONGO_URL=mongodb://wekan-db:27017/wekan" -e "ROOT_URL=http://192.168.1.200:2000" -p 2000:8080 wekanteam/wekan:v5.41
