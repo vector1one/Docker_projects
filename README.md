@@ -1,4 +1,6 @@
-# misp project
+# A place to store all of my successful docker containers.
+
+
 thehive/cortex/misp project 
  using the file from LS111 cyber security blog 
  
@@ -6,3 +8,9 @@ thehive/cortex/misp project
  
  also have coolacid's docker 
  https://github.com/coolacid/docker-misp
+
+https://github.com/TheHive-Project/Docker-Templates
+
+do me
+
+https://github.com/TheHive-Project/Docker-Templates/tree/main/docker/thehive4-cortex3-misp-shuffle
