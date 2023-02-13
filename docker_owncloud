@@ -1,0 +1,31 @@
+docker run -d  --restart unless-stopped --name owncloud -p 0.0.0.0:9003:80 -e OWNCLOUD_DOMAIN=$IP:9003 -v /var/lib/docker/volumes/owncloud/_data:/var/www/html owncloud:10.0
+
+
+#or taken from docker page 
+
+# ownCloud with MariaDB/MySQL
+#
+# Access via "http://localhost:8080" (or "http://$(docker-machine ip):8080" if using docker-machine)
+#
+# During initial ownCloud setup, select "Storage & database" --> "Configure the database" --> "MySQL/MariaDB"
+# Database user: root
+# Database password: example
+# Database name: pick any name
+# Database host: replace "localhost" with "mysql"
+
+version: '3.1'
+
+services:
+
+  owncloud:
+    image: owncloud
+    restart: always
+    ports:
+      - 8087:80
+
+  mysql:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
