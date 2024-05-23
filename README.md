@@ -1,4 +1,4 @@
-# A place to store all of my successful docker containers.
+# A place to store docker containers.
 
 
 thehive/cortex/misp project 
