@@ -1,0 +1,28 @@
+
+version: '3.7'
+
+services:
+  splunk:
+    image: splunk/splunk:latest
+    hostname: splunkenterprise
+    environment:
+      SPLUNK_START_ARGS: --accept-license
+      SPLUNK_PASSWORD: changeme
+    volumes:
+      - splunk_etc:/opt/splunk/etc
+      - splunk_var:/opt/splunk/var
+    ports:
+      - "8000:8000"
+      - "9997:9997"
+      - "8088:8088"
+      - "1514:1514"
+    networks:
+      - splunk_network
+
+volumes:
+  splunk_etc:
+  splunk_var:
+
+networks:
+  splunk_network:
+    driver: bridge
