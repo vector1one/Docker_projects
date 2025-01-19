@@ -1,0 +1,42 @@
+title: "HAL"
+subtitle: "Happy App Land"
+logo: "/assets/assets/stargate.jpg"
+icon: "/assets/assets/favicon.ico"
+
+header: true
+footer: false
+
+columns: "4"
+
+defaults:
+  layout: list
+  colorTheme: dark
+
+theme: default
+colors:
+  dark:
+    highlight-primary: "#fffff"
+    highlight-secondary: "#131313"
+    highlight-hover: "#131313"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "ffffff"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+services:
+- name: " "
+  icon: "none"
+  items:
+      - name: "Cockpit"
+        logo: "assets/assets/cockpit.png"
+        subtitle: "Linux Server Management"
+        url: "https://XXXXX:9090/"
+        target: "_blank"
+
+
+###customconfig for minimalist homer ###
