@@ -1,0 +1,2 @@
+for nextcloud, to add new trusted domains
+occ config:system:set trusted_domains 1 --value=yourip
